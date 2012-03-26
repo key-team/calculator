@@ -27,7 +27,7 @@ class OutputConvertor {
     public static String toBin(Operand op1)
     {
         int intValue = Double.valueOf(op1.getValue()).intValue();
-        return String.format("%b", intValue);
+        return Integer.toBinaryString(intValue);
     }
     public static String toDec(Operand op1)
     {
