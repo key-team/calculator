@@ -9,7 +9,7 @@ package MASCalculator;
  *
  * @author dell
  */
-class Operand {
+class Operand implements Cloneable {
     private double value;
 
     public Operand(double value)
@@ -20,6 +20,16 @@ class Operand {
     public Operand()
     {
         this.value = 0.0;
+    }
+    public  Object clone()
+    {
+        try
+        {
+            return super.clone();
+        }catch(CloneNotSupportedException exp)
+        {
+            return null;
+        }
     }
     public void setValue(double v)
     {
