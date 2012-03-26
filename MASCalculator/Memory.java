@@ -5,10 +5,17 @@
 
 package MASCalculator;
 
+
 /**
  *
- * @author dell
+ * @author SajadRobati
+ * @
  */
 class Memory {
 
+    private Operand memory;
+    public Memory()
+    {
+       
+    }
 }
