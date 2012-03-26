@@ -21,15 +21,10 @@ class Operand implements Cloneable {
     {
         this.value = 0.0;
     }
-    public  Object clone()
+    public  Operand clone()
     {
-        try
-        {
-            return super.clone();
-        }catch(CloneNotSupportedException exp)
-        {
-            return null;
-        }
+        Operand opr = new Operand(this.value);
+        return opr;
     }
     public void setValue(double v)
     {

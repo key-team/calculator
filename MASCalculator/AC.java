@@ -12,16 +12,20 @@ package MASCalculator;
 class AC {
     private Operand ac;
 
+    public AC()
+    {
+        ac = null;
+    }
     public AC(Operand ac)
     {
-        this.ac = ac;
+        this.ac = ac.clone();
     }
     public void setValue(Operand ac)
     {
-        this.ac = ac;
+        this.ac = ac.clone();
     }
     public Operand getValue()
     {
-        return this.ac;
+        return this.ac.clone();
     }
 }
