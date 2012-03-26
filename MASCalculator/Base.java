@@ -44,27 +44,29 @@ class Base {
                 case Constants.BASE_DECIMAL:
                     o=OutputConvertor.toDec(op);
                     break;    
-        } 
+        }
+        return o;
     }
     public Operand inConvert(String inStr)
     {
-        Operand op =new Operand();
-        String o="";
+        Operand op = new Operand();
+        
         switch(curentBase)
             {
             case Constants.BASE_BINARY:
-                    op=InputConvertor.toBin(o);
+                    op=InputConvertor.toBin(inStr);
                     break;
                 case Constants.BASE_OCTAL:
-                    op=InputConvertor.toOct(o);
+                    op=InputConvertor.toOct(inStr);
                     break;
                 case Constants.BASE_HEX:
-                    op=InputConvertor.toHex(o);
+                    op=InputConvertor.toHex(inStr);
                     break;
                 case Constants.BASE_DECIMAL:
-                    op=InputConvertor.toDec(o);
+                    op=InputConvertor.toDec(inStr);
                     break;     
             }
+        return op;
     }
     
 }
