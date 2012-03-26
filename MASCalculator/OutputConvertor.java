@@ -5,6 +5,8 @@
 
 package MASCalculator;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author dell
@@ -20,7 +22,8 @@ class OutputConvertor {
     }
     public static String toBin(Operand op1)
     {
-        return String.format("%b", op1.getValue());
+        int value=Integer.parseInt(Double.toString(op1.getValue()), 2);
+        return Integer.toString(value);
     }
     public static String toDec(Operand op1)
     {
