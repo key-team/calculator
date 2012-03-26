@@ -11,4 +11,24 @@ package MASCalculator;
  */
 class InputConvertor {
 
+    public static Operand toHex(String str)
+    {
+        
+    }
+    
+    public static Operand toOct(String str)
+    {
+        
+    }
+    
+    public static Operand toBin(String str)
+    {
+        
+    }
+    
+    public static Operand toDec(String str)
+    {
+        
+    }
+    
 }
