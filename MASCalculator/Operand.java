@@ -12,9 +12,14 @@ package MASCalculator;
 class Operand {
     private double value;
 
+    public Operand(double value)
+    {
+        this.value = value;
+    }
+
     public Operand()
     {
-    
+        this.value = 0.0;
     }
     public void setValue(double v)
     {
