@@ -37,8 +37,7 @@ class InputConvertor {
     
     public static Operand toDec(String str)
     {
-      int intValue = Integer.parseInt(str, 10);
-      double doubleValue = (double) intValue;
+      Double doubleValue = Double.valueOf(str).doubleValue();
       Operand tempOperand = new Operand(doubleValue);
       return tempOperand;
     }
