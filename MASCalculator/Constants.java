@@ -10,5 +10,5 @@ package MASCalculator;
  * @author dell
  */
 public class Constants {
-
+    public static final int ERROR_DIVBYZERO = 100;
 }
