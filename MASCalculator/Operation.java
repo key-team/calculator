@@ -9,7 +9,7 @@ package MASCalculator;
  *
  * @author dell
  */
-public class Operation
+class Operation
 {
     private Error   err;
     private AC      ac;
