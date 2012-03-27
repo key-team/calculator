@@ -58,5 +58,32 @@ class Operation
         tempOperand.setValue(buf);
         return tempOperand;
     }
-    
+
+    public Operand mod(Operand op1, Operand op2)
+    {
+        Operand tempOperand = new Operand();
+
+        double res = op1.getValue() % op2.getValue();
+        tempOperand.setValue(res);
+        
+        return tempOperand;
+    }
+    public Operand round(Operand op)
+    {
+        Operand tempOperand = new Operand();
+
+        double res = Math.round(op.getValue());
+        tempOperand.setValue(res);
+
+        return tempOperand;        
+    }
+    public Operand ceil(Operand op)
+    {
+        Operand tempOperand = new Operand();
+
+        double res = Math.ceil(op.getValue());
+        tempOperand.setValue(res);
+
+        return tempOperand;
+    }
 }
