@@ -21,6 +21,7 @@ class Operand implements Cloneable {
     {
         this.value = 0.0;
     }
+    @Override
     public  Operand clone()
     {
         Operand opr = new Operand(this.value);
