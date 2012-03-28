@@ -93,4 +93,75 @@ class Operation
         ac.setValue(tempOperand);
         return tempOperand;
     }
+    public Operand sin(Operand op)
+    {
+        Operand tempOprOperand=new Operand();
+        
+        double res = Math.sin(op.getValue());
+        tempOprOperand.setValue(res);
+        
+        ac.setValue(tempOprOperand);
+        return tempOprOperand;
+
+    }
+    
+    public Operand cos(Operand op)
+    {
+        Operand tempOprOperand=new Operand();
+        
+        double res = Math.cos(op.getValue());
+        tempOprOperand.setValue(res);
+        
+        ac.setValue(tempOprOperand);
+        return tempOprOperand;
+
+    }
+    
+    public Operand tan(Operand op)
+    {
+        Operand tempOprOperand=new Operand();
+        
+        double res = Math.tan(op.getValue());
+        tempOprOperand.setValue(res);
+        
+        ac.setValue(tempOprOperand);
+        return tempOprOperand;
+
+    }
+    
+    public Operand cot(Operand op)
+    {
+        Operand tempOprOperand=new Operand();
+        
+        double res =1.0/(Math.tan(op.getValue()));
+        tempOprOperand.setValue(res);
+        
+        ac.setValue(tempOprOperand);
+        return tempOprOperand;
+
+    }
+    public Operand floor(Operand op)
+    {
+        Operand tempOprOperand=new Operand();
+        
+        double res = Math.floor(op.getValue());
+        tempOprOperand.setValue(res);
+        
+        ac.setValue(tempOprOperand);
+        return tempOprOperand;
+
+    }
+    public Operand intFunc(Operand op)
+    {
+        Operand tempOprOperand=new Operand();
+        
+ 
+        tempOprOperand.setValue((int)op.getValue());
+        
+        ac.setValue(tempOprOperand);
+        return tempOprOperand;
+
+    }
+    
+  
 }
