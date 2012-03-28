@@ -93,7 +93,6 @@ class Operation
         ac.setValue(tempOperand);
         return tempOperand;
     }
-<<<<<<< .merge_file_a01544
     public Operand floor(Operand op)
     {
         Operand tempOperand = new Operand();
@@ -169,5 +168,4 @@ class Operation
         return tempOprOperand;
 
     }
-
 }
