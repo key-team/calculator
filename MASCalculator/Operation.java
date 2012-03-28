@@ -168,13 +168,34 @@ class Operation
         return tempOprOperand;
 
     }
-    
-    public Operand rotateRight(Operand op, Operand shiftCount)
+
+    public Operand and(Operand op,Operand op1)
     {
-        int opIntValue = Double.valueOf(op.getValue()).intValue();
-        int shiftCountIntValue = Double.valueOf(shiftCount.getValue()).intValue();
-        int temp = opIntValue & 1;
-        
-        
+        Operand tempOperand = new Operand();
+        tempOperand.setValue((int)op.getValue() & (int)op1.getValue());
+        ac.setValue(tempOperand);
+        return tempOperand;
+
+    }
+    public Operand or(Operand op,Operand op1)
+    {
+        Operand tempOperand = new Operand();
+        tempOperand.setValue((int)op.getValue() | (int)op1.getValue());
+        ac.setValue(tempOperand);
+        return tempOperand;
+    }
+    public Operand xor(Operand op,Operand op1)
+    {
+        Operand tempOperand = new Operand();
+        tempOperand.setValue((int)op.getValue() ^ (int)op1.getValue());
+        ac.setValue(tempOperand);
+        return tempOperand;
+    }
+    public Operand not(Operand op)
+    {
+        Operand tempOperand = new Operand();
+        tempOperand.setValue(~ ((int)op.getValue()));
+        ac.setValue(tempOperand);
+        return tempOperand;        
     }
 }
