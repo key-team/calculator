@@ -123,49 +123,49 @@ class Operation
     }
     public Operand sin(Operand op)
     {
-        Operand tempOprOperand=new Operand();
+        Operand tempOperand=new Operand();
         
         double res = Math.sin(op.getValue());
-        tempOprOperand.setValue(res);
+        tempOperand.setValue(res);
         
-        ac.setValue(tempOprOperand);
-        return tempOprOperand;
+        ac.setValue(tempOperand);
+        return tempOperand;
 
     }
     
     public Operand cos(Operand op)
     {
-        Operand tempOprOperand=new Operand();
+        Operand tempOperand=new Operand();
         
         double res = Math.cos(op.getValue());
-        tempOprOperand.setValue(res);
+        tempOperand.setValue(res);
         
-        ac.setValue(tempOprOperand);
-        return tempOprOperand;
+        ac.setValue(tempOperand);
+        return tempOperand;
 
     }
     
     public Operand tan(Operand op)
     {
-        Operand tempOprOperand=new Operand();
+        Operand tempOperand=new Operand();
         
         double res = Math.tan(op.getValue());
-        tempOprOperand.setValue(res);
+        tempOperand.setValue(res);
         
-        ac.setValue(tempOprOperand);
-        return tempOprOperand;
+        ac.setValue(tempOperand);
+        return tempOperand;
 
     }
     
     public Operand cot(Operand op)
     {
-        Operand tempOprOperand=new Operand();
+        Operand tempOperand=new Operand();
         
         double res =1.0/(Math.tan(op.getValue()));
-        tempOprOperand.setValue(res);
+        tempOperand.setValue(res);
         
-        ac.setValue(tempOprOperand);
-        return tempOprOperand;
+        ac.setValue(tempOperand);
+        return tempOperand;
 
     }
     public Operand and(Operand op,Operand op1)
@@ -197,5 +197,28 @@ class Operation
         ac.setValue(tempOperand);
         return tempOperand;        
     }
+    
+     public Operand shiftTleft(Operand op1, Operand op2)
+    {
+        Operand tempOperand = new Operand();
+       
+        int tempintop1 = Double.valueOf(op1.getValue()).intValue();
+        int tempintop2 = Double.valueOf(op2.getValue()).intValue();
+        tempOperand.setValue( tempintop1 << tempintop2 );
+        ac.setValue(tempOperand);
+        return tempOperand;
+    }
+    
+     public Operand rightTleft(Operand op1, Operand op2)
+    {
+        Operand tempOperand = new Operand();
+       
+        int tempintop1 = Double.valueOf(op1.getValue()).intValue();
+        int tempintop2 = Double.valueOf(op2.getValue()).intValue();
+        tempOperand.setValue( tempintop1 >> tempintop2 );
+        ac.setValue(tempOperand);
+        return tempOperand;
+    }
+ 
 
 }
