@@ -5,7 +5,6 @@
 
 package MASCalculator;
 
-import com.sun.corba.se.impl.orbutil.closure.Constant;
 
 /**
  *
