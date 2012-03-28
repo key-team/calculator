@@ -168,4 +168,33 @@ class Operation
         return tempOprOperand;
 
     }
+    public Operand and(Operand op,Operand op1)
+    {
+        Operand tempOperand = new Operand();
+        tempOperand.setValue((int)op.getValue() & (int)op1.getValue());
+        ac.setValue(tempOperand);
+        return tempOperand;
+
+    }
+    public Operand or(Operand op,Operand op1)
+    {
+        Operand tempOperand = new Operand();
+        tempOperand.setValue((int)op.getValue() | (int)op1.getValue());
+        ac.setValue(tempOperand);
+        return tempOperand;
+    }
+    public Operand xor(Operand op,Operand op1)
+    {
+        Operand tempOperand = new Operand();
+        tempOperand.setValue((int)op.getValue() ^ (int)op1.getValue());
+        ac.setValue(tempOperand);
+        return tempOperand;
+    }
+    public Operand not(Operand op)
+    {
+        Operand tempOperand = new Operand();
+        tempOperand.setValue(~ ((int)op.getValue()));
+        ac.setValue(tempOperand);
+        return tempOperand;        
+    }
 }
