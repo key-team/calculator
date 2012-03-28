@@ -93,6 +93,34 @@ class Operation
         ac.setValue(tempOperand);
         return tempOperand;
     }
+    public Operand floor(Operand op)
+    {
+        Operand tempOperand = new Operand();
+        double temp=Math.floor(op.getValue());
+        tempOperand.setValue(temp);
+        ac.setValue(tempOperand);
+        return tempOperand;
+    }
+    public Operand Int(Operand op)
+    {
+        Operand tempOperand= new Operand();
+        tempOperand.setValue((int)op.getValue());
+        ac.setValue(tempOperand);
+        return tempOperand;
+
+    }
+    public Operand power(Operand op,Operand op1)
+    {
+        Operand tempOperand = new Operand();
+        double temp=Math.pow(op.getValue(), op1.getValue());
+        tempOperand.setValue(temp);
+        ac.setValue(tempOperand);
+        return tempOperand;
+    }
+    public Operand logarithm()
+    {
+        
+    }
     public Operand sin(Operand op)
     {
         Operand tempOprOperand=new Operand();
@@ -140,29 +168,34 @@ class Operation
         return tempOprOperand;
 
     }
-    public Operand floor(Operand op)
+    public Operand and(Operand op,Operand op1)
     {
-        Operand tempOprOperand=new Operand();
-        
-        double res = Math.floor(op.getValue());
-        tempOprOperand.setValue(res);
-        
-        ac.setValue(tempOprOperand);
-        return tempOprOperand;
+        Operand tempOperand = new Operand();
+        tempOperand.setValue((int)op.getValue() & (int)op1.getValue());
+        ac.setValue(tempOperand);
+        return tempOperand;
 
     }
-    public Operand intFunc(Operand op)
+    public Operand or(Operand op,Operand op1)
     {
-        Operand tempOprOperand=new Operand();
-        
- 
-        tempOprOperand.setValue((int)op.getValue());
-        
-        ac.setValue(tempOprOperand);
-        return tempOprOperand;
-
+        Operand tempOperand = new Operand();
+        tempOperand.setValue((int)op.getValue() | (int)op1.getValue());
+        ac.setValue(tempOperand);
+        return tempOperand;
+    }
+    public Operand xor(Operand op,Operand op1)
+    {
+        Operand tempOperand = new Operand();
+        tempOperand.setValue((int)op.getValue() ^ (int)op1.getValue());
+        ac.setValue(tempOperand);
+        return tempOperand;
+    }
+    public Operand not(Operand op)
+    {
+        Operand tempOperand = new Operand();
+        tempOperand.setValue(~ ((int)op.getValue()));
+        ac.setValue(tempOperand);
+        return tempOperand;        
     }
 
-   
-  
 }
