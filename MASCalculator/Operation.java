@@ -198,4 +198,8 @@ class Operation
         return tempOperand;        
     }
 
+    public Operand rotateLeft(Operand op1, Operand op2)
+    {
+        int i1 = 
+    }
 }
