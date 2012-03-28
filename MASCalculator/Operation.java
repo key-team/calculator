@@ -205,11 +205,38 @@ class Operation
         ac.setValue(tempOperand);
         return tempOperand;
 
+
     }
     
     public Operand rotateLeft(Operand op1, Operand op2)
     {
-        int i1 =
+        int num = (int)op1.getValue();
+        int count = (int)op2.getValue();
+    
     }
+    
+     public Operand shiftTleft(Operand op1, Operand op2)
+    {
+        Operand tempOperand = new Operand();
+       
+        int tempintop1 = Double.valueOf(op1.getValue()).intValue();
+        int tempintop2 = Double.valueOf(op2.getValue()).intValue();
+        tempOperand.setValue( tempintop1 << tempintop2 );
+        ac.setValue(tempOperand);
+        return tempOperand;
+    }
+    
+     public Operand shiftTright(Operand op1, Operand op2)
+    {
+        Operand tempOperand = new Operand();
+       
+        int tempintop1 = Double.valueOf(op1.getValue()).intValue();
+        int tempintop2 = Double.valueOf(op2.getValue()).intValue();
+        tempOperand.setValue( tempintop1 >> tempintop2 );
+        ac.setValue(tempOperand);
+        return tempOperand;
+    }
+ 
+
 
 }
