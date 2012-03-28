@@ -198,4 +198,13 @@ class Operation
         ac.setValue(tempOperand);
         return tempOperand;        
     }
+    
+     public Operand rotateRight(Operand op, Operand shiftCount)
+    {
+        int opIntValue = Double.valueOf(op.getValue()).intValue();
+        int shiftCountIntValue = Double.valueOf(shiftCount.getValue()).intValue();
+        int temp = opIntValue & 1;
+        opIntValue >>= shiftCountIntValue;
+        opIntValue 
+    }   
 }
