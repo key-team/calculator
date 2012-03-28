@@ -206,6 +206,19 @@ class Operation
         ac.setValue(tempOperand);
         return tempOperand;
 
+
+
+    }
+    
+    public Operand rotateLeft(Operand op1, Operand op2)
+    {
+        Operand tempOperand = new Operand();
+        int num = (int)op1.getValue();
+        int count = (int)op2.getValue();
+
+        tempOperand.setValue(Integer.rotateLeft(num, count));
+
+        return tempOperand;
     }
     
      public Operand shiftTleft(Operand op1, Operand op2)
@@ -218,7 +231,7 @@ class Operation
         ac.setValue(tempOperand);
         return tempOperand;
     }
-       
+
      public Operand shiftTright(Operand op1, Operand op2)
     {
         Operand tempOperand = new Operand();
@@ -238,5 +251,8 @@ class Operation
         return tempOperand;
         
     }   
+
+
+
 
 }
