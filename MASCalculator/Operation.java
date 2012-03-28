@@ -93,6 +93,7 @@ class Operation
         ac.setValue(tempOperand);
         return tempOperand;
     }
+<<<<<<< .merge_file_a01544
     public Operand floor(Operand op)
     {
         Operand tempOperand = new Operand();
@@ -104,8 +105,7 @@ class Operation
     public Operand Int(Operand op)
     {
         Operand tempOperand= new Operand();
-        double temp = Math.rint(op.getValue());
-        tempOperand.setValue(temp);
+        tempOperand.setValue((int)op.getValue());
         ac.setValue(tempOperand);
         return tempOperand;
 
@@ -122,4 +122,52 @@ class Operation
     {
         
     }
+    public Operand sin(Operand op)
+    {
+        Operand tempOprOperand=new Operand();
+        
+        double res = Math.sin(op.getValue());
+        tempOprOperand.setValue(res);
+        
+        ac.setValue(tempOprOperand);
+        return tempOprOperand;
+
+    }
+    
+    public Operand cos(Operand op)
+    {
+        Operand tempOprOperand=new Operand();
+        
+        double res = Math.cos(op.getValue());
+        tempOprOperand.setValue(res);
+        
+        ac.setValue(tempOprOperand);
+        return tempOprOperand;
+
+    }
+    
+    public Operand tan(Operand op)
+    {
+        Operand tempOprOperand=new Operand();
+        
+        double res = Math.tan(op.getValue());
+        tempOprOperand.setValue(res);
+        
+        ac.setValue(tempOprOperand);
+        return tempOprOperand;
+
+    }
+    
+    public Operand cot(Operand op)
+    {
+        Operand tempOprOperand=new Operand();
+        
+        double res =1.0/(Math.tan(op.getValue()));
+        tempOprOperand.setValue(res);
+        
+        ac.setValue(tempOprOperand);
+        return tempOprOperand;
+
+    }
+
 }
