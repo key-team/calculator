@@ -206,13 +206,20 @@ class Operation
         return tempOperand;
 
 
+
     }
     
     public Operand rotateLeft(Operand op1, Operand op2)
     {
         int num = (int)op1.getValue();
         int count = (int)op2.getValue();
-    
+        int leftBit = 0;
+
+        for(int i = 1; i <= count; i++ )
+        {
+            leftBit = num & 0x80000000;
+            leftBit = leftBit
+        }
     }
     
      public Operand shiftTleft(Operand op1, Operand op2)
@@ -226,6 +233,7 @@ class Operation
         return tempOperand;
     }
     
+
      public Operand shiftTright(Operand op1, Operand op2)
     {
         Operand tempOperand = new Operand();
@@ -237,6 +245,8 @@ class Operation
         return tempOperand;
     }
  
+
+
 
 
 }
