@@ -211,15 +211,13 @@ class Operation
     
     public Operand rotateLeft(Operand op1, Operand op2)
     {
+        Operand tempOperand = new Operand();
         int num = (int)op1.getValue();
         int count = (int)op2.getValue();
-        int leftBit = 0;
 
-        for(int i = 1; i <= count; i++ )
-        {
-            leftBit = num & 0x80000000;
-            leftBit = leftBit
-        }
+        tempOperand.setValue(Integer.rotateLeft(num, count));
+
+        return tempOperand;
     }
     
      public Operand shiftTleft(Operand op1, Operand op2)
