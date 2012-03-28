@@ -93,4 +93,33 @@ class Operation
         ac.setValue(tempOperand);
         return tempOperand;
     }
+    public Operand floor(Operand op)
+    {
+        Operand tempOperand = new Operand();
+        double temp=Math.floor(op.getValue());
+        tempOperand.setValue(temp);
+        ac.setValue(tempOperand);
+        return tempOperand;
+    }
+    public Operand Int(Operand op)
+    {
+        Operand tempOperand= new Operand();
+        double temp = Math.rint(op.getValue());
+        tempOperand.setValue(temp);
+        ac.setValue(tempOperand);
+        return tempOperand;
+
+    }
+    public Operand power(Operand op,Operand op1)
+    {
+        Operand tempOperand = new Operand();
+        double temp=Math.pow(op.getValue(), op1.getValue());
+        tempOperand.setValue(temp);
+        ac.setValue(tempOperand);
+        return tempOperand;
+    }
+    public Operand logarithm()
+    {
+        
+    }
 }
