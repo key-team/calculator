@@ -248,7 +248,7 @@ class Operation
         int opIntValue = Double.valueOf(op.getValue()).intValue();
         int shiftCountIntValue = Double.valueOf(shiftCount.getValue()).intValue();
         Operand tempOperand = new Operand(Integer.valueOf(Integer.rotateRight(opIntValue, shiftCountIntValue)).doubleValue());
-        
+        ac.setValue(tempOperand);
         
     }   
 
