@@ -15,6 +15,8 @@ package MASCalculator;
 
 public class Controller
 {
+    private Operand op1;
+    private Operand op2;
     private Base base;
     private Memory mem;
     private Operation operation;
