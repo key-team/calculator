@@ -39,6 +39,7 @@ public class Controller
     
     public void setNumberBase(int numberBase)
     {
+        base.setBase(numberBase);
     }
     
     public int getNumberBase()
@@ -54,8 +55,9 @@ public class Controller
     {
     }
     
-    public OperationResult clearMemory()
+    public void clearMemory()
     {
+        mem.setValue(null);
     }
     
     public boolean isMemorySet()
