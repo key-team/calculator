@@ -19,5 +19,10 @@ public class Controller
     private Error err;
     private AC ac;
 
-    
+    public Controller()
+    {
+        this.base = new Base();
+        this.mem = new Memory();
+        
+    }
 }
