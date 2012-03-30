@@ -35,6 +35,7 @@ public class Controller
     
     public OperationResult performOperation(OperationParams opParams)
     {
+        OperationResult opRes = new OperationResult();
         int opCode;
         opCode = opParams.getOpCode();
 
@@ -110,6 +111,7 @@ public class Controller
                 break;
 
         }
+        return opRes;
     }
     
     public void setNumberBase(int numberBase)
