@@ -10,33 +10,33 @@ package MASCalculator;
  * @author dell
  */
 public class Constants {
-    public static final String OPCODE_SUM = "sum";
-    public static final String OPCODE_SUB = "sub";
-    public static final String OPCODE_MUL = "mul";
-    public static final String OPCODE_DIV = "div";
+    public static final int OPCODE_SUM = 1000;
+    public static final int OPCODE_SUB = 1002;
+    public static final int OPCODE_MUL = 1003;
+    public static final int OPCODE_DIV = 1004;
 
-    public static final String OPCODE_MOD = "mod";
-    public static final String OPCODE_ROUND = "round";
-    public static final String OPCODE_CEIL = "ceil";
-    public static final String OPCODE_FLOOR = "floor";
-    public static final String OPCODE_INT = "int";
+    public static final int OPCODE_MOD = 1005;
+    public static final int OPCODE_ROUND = 1006;
+    public static final int OPCODE_CEIL = 1007;
+    public static final int OPCODE_FLOOR = 1008;
+    public static final int OPCODE_INT = 1009;
 
-    public static final String OPCODE_POWER = "power";
-    public static final String OPCODE_LOG = "log";
-    public static final String OPCODE_SIN = "sin";
-    public static final String OPCODE_COS = "cos";
-    public static final String OPCODE_TAN = "tan";
-    public static final String OPCODE_COT = "cot";
+    public static final int OPCODE_POWER = 1010;
+    public static final int OPCODE_LOG = 1011;
+    public static final int OPCODE_SIN = 1012;
+    public static final int OPCODE_COS = 1013;
+    public static final int OPCODE_TAN = 1014;
+    public static final int OPCODE_COT = 1015;
     
-    public static final String OPCODE_AND = "and";
-    public static final String OPCODE_OR = "or";
-    public static final String OPCODE_XOR = "xor";
-    public static final String OPCODE_NOT = "not";
+    public static final int OPCODE_AND = 1016;
+    public static final int OPCODE_OR = 1017;
+    public static final int OPCODE_XOR = 1018;
+    public static final int OPCODE_NOT = 1019;
 
-    public static final String OPCODE_SHIFT_LEFT = "shiftLeft";
-    public static final String OPCODE_SHIFT_RIGHT = "shiftRight";
-    public static final String OPCODE_ROTATE_LEFT = "rotateLeft";
-    public static final String OPCODE_ROTATE_RIGHT = "rotateRight";
+    public static final int OPCODE_SHIFT_LEFT = 1020;
+    public static final int OPCODE_SHIFT_RIGHT = 1021;
+    public static final int OPCODE_ROTATE_LEFT = 1022;
+    public static final int OPCODE_ROTATE_RIGHT = 1023;
 
     
     public static final int ERROR_DIVBYZERO = 100;
