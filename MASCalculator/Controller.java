@@ -44,8 +44,9 @@ public class Controller
     public int getNumberBase()
     {
     }
-    public int saveToMemory()
+    public void saveToMemory()
     {
+        this.mem.setValue(this.ac.getValue());
     }
     
     public OperationResult retriveMemory()
