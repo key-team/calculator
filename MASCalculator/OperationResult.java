@@ -20,24 +20,30 @@ public class OperationResult
         err = new Error();
         result = "";
     }
+
     public int getErrorCode()
     {
         return err.getErrorCode();
     }
+
     public String getErrorMessage()
     {
         return err.getErrorMessage();
     }
+
     public String getResult()
     {
         return result;
     }
+
     public void setResult(String res)
     {
         result = res;
     }
+
     public void setErr(Error err1)
     {
         err = err1;
     }
+    
 }

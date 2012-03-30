@@ -57,7 +57,14 @@ public class Controller
     public OperationResult retriveMemory()
     {
         OperationResult opRes = new OperationResult();
-        opRes.setResult(this.base.outConvert(this.mem.getValue()));
+        if (mem.getState())
+            opRes.setResult(this.base.outConvert(this.mem.getValue()));
+        else
+        {
+            Error tempErr = new Error();
+            tempErr.setErrorCode(Constants.MEMORY_EMPTY);
+            opRes.setErr(tempErr);
+        }
         return opRes;
 
     }
