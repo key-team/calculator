@@ -11,4 +11,10 @@ package MASCalculator;
  */
 public class Controller {
 
+    public Controller()
+    {
+        this.base = new Base();
+        this.mem = new Memory();
+        
+    }
 }
