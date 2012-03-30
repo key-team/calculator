@@ -43,7 +43,9 @@ public class Controller
     
     public int getNumberBase()
     {
+       return this.base.getBase();
     }
+    
     public int saveToMemory()
     {
     }
@@ -56,7 +58,8 @@ public class Controller
     {
     }
     
-    public boolean  isMemorySet()
+    public boolean isMemorySet()
     {
+        return this.mem.getState();
     }
 }
