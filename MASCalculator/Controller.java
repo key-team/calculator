@@ -39,11 +39,14 @@ public class Controller
     
     public void setNumberBase(int numberBase)
     {
+        base.setBase(numberBase);
     }
     
     public int getNumberBase()
     {
+       return this.base.getBase();
     }
+    
     public int saveToMemory()
     {
     }
@@ -53,11 +56,13 @@ public class Controller
         this.mem.getValue();
     }
     
-    public OperationResult clearMemory()
+    public void clearMemory()
     {
+        mem.setValue(null);
     }
     
-    public boolean  isMemorySet()
+    public boolean isMemorySet()
     {
+        return this.mem.getState();
     }
 }
