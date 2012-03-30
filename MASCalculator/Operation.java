@@ -19,31 +19,31 @@ class Operation
         this.err = errParam;
         this.ac = acParam;
     }
-    public Operand sum(Operand op1, Operand op2)
+    public void sum(Operand op1, Operand op2)
     {
         Operand tempOperand = new Operand();
         tempOperand.setValue( op1.getValue() + op2.getValue() );
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }
-    public Operand subtract(Operand op1, Operand op2)
+    public void subtract(Operand op1, Operand op2)
     {
         Operand tempOperand = new Operand();
         tempOperand.setValue( op1.getValue() - op2.getValue() );
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }
-    public Operand multiply(Operand op1, Operand op2)
+    public void multiply(Operand op1, Operand op2)
     {
         Operand tempOperand = new Operand();
         tempOperand.setValue( op1.getValue() * op2.getValue() );
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }
-    public Operand division(Operand op1, Operand op2)
+    public void division(Operand op1, Operand op2)
     {
         Operand tempOperand = new Operand();
         double buf;
@@ -54,15 +54,15 @@ class Operation
         catch (Exception e)
         {
             err.setErrorCode(Constants.ERROR_DIVBYZERO);
-            return null;
+            return;
         }
 
         tempOperand.setValue(buf);
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }
-    public Operand mod(Operand op1, Operand op2)
+    public void mod(Operand op1, Operand op2)
     {
         Operand tempOperand = new Operand();
 
@@ -70,10 +70,10 @@ class Operation
         tempOperand.setValue(res);
 
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }
-    public Operand round(Operand op)
+    public void round(Operand op)
     {
         Operand tempOperand = new Operand();
 
@@ -81,10 +81,10 @@ class Operation
         tempOperand.setValue(res);
 
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }
-    public Operand ceil(Operand op)
+    public void ceil(Operand op)
     {
         Operand tempOperand = new Operand();
 
@@ -92,44 +92,44 @@ class Operation
         tempOperand.setValue(res);
 
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }
-    public Operand floor(Operand op)
+    public void floor(Operand op)
     {
         Operand tempOperand = new Operand();
         double temp=Math.floor(op.getValue());
         tempOperand.setValue(temp);
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }
-    public Operand Int(Operand op)
+    public void Int(Operand op)
     {
         Operand tempOperand= new Operand();
         tempOperand.setValue((int)op.getValue());
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }
-    public Operand power(Operand op,Operand op1)
+    public void power(Operand op,Operand op1)
     {
         Operand tempOperand = new Operand();
         double temp=Math.pow(op.getValue(), op1.getValue());
         tempOperand.setValue(temp);
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }
-    public Operand logarithm(Operand op)
+    public void logarithm(Operand op)
     {
         Operand tempOperand = new Operand();
         tempOperand.setValue(Math.log10(op.getValue()));
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }
-    public Operand sin(Operand op)
+    public void sin(Operand op)
     {
         Operand tempOperand=new Operand();
         
@@ -137,10 +137,10 @@ class Operation
         tempOperand.setValue(res);
         
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }    
-    public Operand cos(Operand op)
+    public void cos(Operand op)
     {
         Operand tempOperand=new Operand();
         
@@ -148,11 +148,11 @@ class Operation
         tempOperand.setValue(res);
         
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }
     
-    public Operand tan(Operand op)
+    public void tan(Operand op)
     {
         Operand tempOperand=new Operand();
         
@@ -160,10 +160,10 @@ class Operation
         tempOperand.setValue(res);
         
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }    
-    public Operand cot(Operand op)
+    public void cot(Operand op)
     {
         Operand tempOperand=new Operand();
         
@@ -171,46 +171,46 @@ class Operation
         tempOperand.setValue(res);
         
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }
 
-    public Operand and(Operand op,Operand op1)
+    public void and(Operand op,Operand op1)
     {
         Operand tempOperand = new Operand();
         tempOperand.setValue((int)op.getValue() & (int)op1.getValue());
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }
-    public Operand or(Operand op,Operand op1)
+    public void or(Operand op,Operand op1)
     {
         Operand tempOperand = new Operand();
         tempOperand.setValue((int)op.getValue() | (int)op1.getValue());
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }
-    public Operand xor(Operand op,Operand op1)
+    public void xor(Operand op,Operand op1)
     {
         Operand tempOperand = new Operand();
         tempOperand.setValue((int)op.getValue() ^ (int)op1.getValue());
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
     }
-    public Operand not(Operand op)
+    public void not(Operand op)
     {
         Operand tempOperand = new Operand();
         tempOperand.setValue(~ ((int)op.getValue()));
         ac.setValue(tempOperand);
-        return tempOperand;
+        
 
 
 
     }
     
-    public Operand rotateLeft(Operand op1, Operand op2)
+    public void rotateLeft(Operand op1, Operand op2)
     {
         Operand tempOperand = new Operand();
         int num = (int)op1.getValue();
@@ -218,10 +218,10 @@ class Operation
 
         tempOperand.setValue(Integer.rotateLeft(num, count));
 
-        return tempOperand;
+        
     }
     
-     public Operand shiftTleft(Operand op1, Operand op2)
+     public void shiftTleft(Operand op1, Operand op2)
     {
         Operand tempOperand = new Operand();
        
@@ -229,10 +229,10 @@ class Operation
         int tempintop2 = Double.valueOf(op2.getValue()).intValue();
         tempOperand.setValue( tempintop1 << tempintop2 );
         ac.setValue(tempOperand);
-        return tempOperand;
+        
     }
 
-     public Operand shiftTright(Operand op1, Operand op2)
+     public void shiftTright(Operand op1, Operand op2)
     {
         Operand tempOperand = new Operand();
        
@@ -240,15 +240,15 @@ class Operation
         int tempintop2 = Double.valueOf(op2.getValue()).intValue();
         tempOperand.setValue( tempintop1 >> tempintop2 );
         ac.setValue(tempOperand);
-        return tempOperand;
+        
     }
  
-     public Operand rotateRight(Operand op, Operand shiftCount)
+     public void rotateRight(Operand op, Operand shiftCount)
     {
         int opIntValue = Double.valueOf(op.getValue()).intValue();
         int shiftCountIntValue = Double.valueOf(shiftCount.getValue()).intValue();
         Operand tempOperand = new Operand(Integer.valueOf(Integer.rotateRight(opIntValue, shiftCountIntValue)).doubleValue());
-        return tempOperand;
+        
         
     }   
 
