@@ -54,6 +54,13 @@ public class Controller
                 break;
 
             case Constants.OPCODE_SUB:
+                op1 = base.inConvert(opParams.getOp1());
+                op2 = base.inConvert(opParams.getOp2());
+                operation.subtract(op1, op2);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_MUL:
@@ -66,6 +73,12 @@ public class Controller
                 break;
 
             case Constants.OPCODE_ROUND:
+                op1 = base.inConvert(opParams.getOp1());
+                operation.round(op1);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_CEIL:
@@ -75,12 +88,26 @@ public class Controller
                 break;
 
             case Constants.OPCODE_INT:
+                
                 break;
 
             case Constants.OPCODE_POWER:
+                op1 = base.inConvert(opParams.getOp1());
+                op2 = base.inConvert(opParams.getOp2());
+                operation.power(op1, op1);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_LOG:
+                op1 = base.inConvert(opParams.getOp1());
+                operation.logarithm(op1);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_SIN:
@@ -90,18 +117,38 @@ public class Controller
                 break;
 
             case Constants.OPCODE_TAN:
+                op1 = base.inConvert(opParams.getOp1());
+                operation.tan(op1);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_COT:
                 break;
 
             case Constants.OPCODE_AND:
+                op1 = base.inConvert(opParams.getOp1());
+                op2 = base.inConvert(opParams.getOp2());
+                operation.and(op1, op1);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_OR:
                 break;
 
             case Constants.OPCODE_XOR:
+                op1 = base.inConvert(opParams.getOp1());
+                op2 = base.inConvert(opParams.getOp2());
+                operation.xor(op1, op1);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_NOT:
@@ -111,12 +158,26 @@ public class Controller
                 break;
 
             case Constants.OPCODE_SHIFT_RIGHT:
+                op1 = base.inConvert(opParams.getOp1());
+                op2 = base.inConvert(opParams.getOp2());
+                operation.shiftTright(op1, op2);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_ROTATE_LEFT:
                 break;
 
             case Constants.OPCODE_ROTATE_RIGHT:
+                op1 = base.inConvert(opParams.getOp1());
+                op2 = base.inConvert(opParams.getOp2());
+                operation.rotateRight(op1, op1);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
         }
