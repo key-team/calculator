@@ -5,11 +5,19 @@
 
 package MASCalculator;
 
+import java.nio.Buffer;
+
 /**
  *
  * @author dell
  */
-public class Controller {
+public class Controller
+{
+    private Base base;
+    private Memory mem;
+    private Operation operation;
+    private Error err;
+    private AC ac;
 
     public Controller()
     {
