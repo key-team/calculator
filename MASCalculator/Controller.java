@@ -23,6 +23,8 @@ public class Controller
     {
         this.base = new Base();
         this.mem = new Memory();
-        
+        this.err = new Error();
+        this.ac = new AC();
+        this.operation = new Operation(this.err, this.ac);       
     }
 }
