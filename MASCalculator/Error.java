@@ -11,18 +11,22 @@ package MASCalculator;
  */
 class Error {
     private int errorCode;
+
     public Error()
     {
         errorCode = 0;
     }
+
     public void setErrorCode(int errorCode)
     {
         this.errorCode = errorCode;
     }
+
     public int getErrorCode()
     {
         return this.errorCode;
     }
+
     public String getErrorMessage()
     {
         String out = "";
@@ -35,5 +39,15 @@ class Error {
         }
 
         return out;
+    }
+
+    /*
+     * if errorCode = 0 then Error not accured(false)
+     */
+    public boolean isErrorOccured()
+    {
+        if ( errorCode == 0 )
+            return false;
+        return true;
     }
 }
