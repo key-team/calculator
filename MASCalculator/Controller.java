@@ -50,6 +50,7 @@ public class Controller
     
     public OperationResult retriveMemory()
     {
+        this.mem.getValue();
     }
     
     public OperationResult clearMemory()
