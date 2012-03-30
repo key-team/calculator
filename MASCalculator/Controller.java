@@ -48,9 +48,10 @@ public class Controller
        return this.base.getBase();
     }   
  
-    public int saveToMemory()
+    public void  saveToMemory()
     {
-        this.mem.setValue(this.ac.getValue());
+       this.mem.setValue(this.ac.getValue());
+        
     }
     
     public OperationResult retriveMemory()
