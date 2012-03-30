@@ -35,6 +35,7 @@ public class Controller
     
     public OperationResult performOperation(OperationParams opParams)
     {
+        
     }
     
     public void setNumberBase(int numberBase)
@@ -54,7 +55,11 @@ public class Controller
     
     public OperationResult retriveMemory()
     {
+        OperationResult opRes = new OperationResult();
         this.mem.getValue();
+        opRes.setResult(base.outConvert(mem.getValue()));
+        return opRes;
+
     }
     
     public void clearMemory()
