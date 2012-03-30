@@ -231,7 +231,7 @@ public class Controller
             case Constants.OPCODE_SHIFT_LEFT:
                 op1 = base.inConvert(opParams.getOp1());
                 op2 = base.inConvert(opParams.getOp2());
-                operation.shiftTleft(op1, op2);
+                operation.shift2Left(op1, op2);
 
                 if (!err.isErrorOccured())
                     opRes.setResult(base.outConvert(ac.getValue()));
@@ -241,7 +241,7 @@ public class Controller
             case Constants.OPCODE_SHIFT_RIGHT:
                 op1 = base.inConvert(opParams.getOp1());
                 op2 = base.inConvert(opParams.getOp2());
-                operation.shiftTright(op1, op2);
+                operation.shift2Right(op1, op2);
 
                 if (!err.isErrorOccured())
                     opRes.setResult(base.outConvert(ac.getValue()));

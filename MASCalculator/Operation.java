@@ -221,7 +221,7 @@ class Operation
         
     }
     
-     public void shiftTleft(Operand op1, Operand op2)
+     public void shift2Left(Operand op1, Operand op2)
     {
         Operand tempOperand = new Operand();
        
@@ -232,7 +232,7 @@ class Operation
         
     }
 
-     public void shiftTright(Operand op1, Operand op2)
+     public void shift2Right(Operand op1, Operand op2)
     {
         Operand tempOperand = new Operand();
        
