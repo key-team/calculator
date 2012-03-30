@@ -60,6 +60,13 @@ public class Controller
                 break;
 
             case Constants.OPCODE_DIV:
+                op1 = base.inConvert(opParams.getOp1());
+                op2 = base.inConvert(opParams.getOp2());
+                operation.division(op1, op2);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_MOD:
@@ -72,6 +79,13 @@ public class Controller
                 break;
 
             case Constants.OPCODE_FLOOR:
+                op1 = base.inConvert(opParams.getOp1());
+                
+                operation.floor(op1);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_INT:
@@ -84,6 +98,13 @@ public class Controller
                 break;
 
             case Constants.OPCODE_SIN:
+                 op1 = base.inConvert(opParams.getOp1());
+                
+                operation.sin(op1);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_COS:
@@ -96,9 +117,17 @@ public class Controller
                 break;
 
             case Constants.OPCODE_AND:
+                
                 break;
 
             case Constants.OPCODE_OR:
+                op1 = base.inConvert(opParams.getOp1());
+                op2 = base.inConvert(opParams.getOp2());
+                operation.or(op1, op2);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_XOR:
@@ -114,6 +143,13 @@ public class Controller
                 break;
 
             case Constants.OPCODE_ROTATE_LEFT:
+                op1 = base.inConvert(opParams.getOp1());
+                op2 = base.inConvert(opParams.getOp2());
+                operation.rotateLeft(op1, op2);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_ROTATE_RIGHT:
