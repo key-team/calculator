@@ -54,7 +54,7 @@ public class OperationParams
         this.opCode = strOpCode;                
     }
     
-    public String getOpCode(String strOpCode)
+    public String getOpCode()
     {
         return this.opCode;
     }
