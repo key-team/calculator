@@ -5,7 +5,7 @@
 
 package MASCalculator;
 
-import java.nio.Buffer;
+
 
 /**
  *
@@ -30,7 +30,7 @@ public class Controller
         this.operation = new Operation(this.err, this.ac);       
 
     }
-    public class Controller {
+
     
     
     public OperationResult performOperation(OperationParams opParams)
