@@ -13,9 +13,9 @@ public class OperationParams
 {
     private String op1;
     private String op2;
-    private String opCode;
+    private int opCode;
     
-    public OperationParams(String operand1, String operand2, String opCode)
+    public OperationParams(String operand1, String operand2, int opCode)
     {
         this.op1 = operand1;
         this.op2 = operand2;
@@ -26,7 +26,7 @@ public class OperationParams
     {
         this.op1 = "";
         this.op2 = "";
-        this.opCode = ""; 
+        this.opCode = 999;
     }
     
     public void setOp1(String strOp1)
@@ -49,12 +49,12 @@ public class OperationParams
         return this.op2;
     }
     
-    public void setOpCode(String strOpCode)
+    public void setOpCode(int strOpCode)
     {
         this.opCode = strOpCode;                
     }
     
-    public String getOpCode()
+    public int getOpCode()
     {
         return this.opCode;
     }
