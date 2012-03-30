@@ -44,6 +44,13 @@ public class Controller
         switch (opCode)
         {
             case Constants.OPCODE_SUM:
+                op1 = base.inConvert(opParams.getOp1());
+                op2 = base.inConvert(opParams.getOp2());
+                operation.sum(op1, op2);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_SUB:
