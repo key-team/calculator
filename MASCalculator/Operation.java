@@ -217,7 +217,7 @@ class Operation
         int count = (int)op2.getValue();
 
         tempOperand.setValue(Integer.rotateLeft(num, count));
-
+        ac.setValue(tempOperand);
         
     }
     
