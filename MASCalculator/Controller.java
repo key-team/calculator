@@ -35,7 +35,81 @@ public class Controller
     
     public OperationResult performOperation(OperationParams opParams)
     {
-        
+        int opCode;
+        opCode = opParams.getOpCode();
+
+        switch (opCode)
+        {
+            case Constants.OPCODE_SUM:
+                break;
+
+            case Constants.OPCODE_SUB:
+                break;
+
+            case Constants.OPCODE_MUL:
+                break;
+
+            case Constants.OPCODE_DIV:
+                break;
+
+            case Constants.OPCODE_MOD:
+                break;
+
+            case Constants.OPCODE_ROUND:
+                break;
+
+            case Constants.OPCODE_CEIL:
+                break;
+
+            case Constants.OPCODE_FLOOR:
+                break;
+
+            case Constants.OPCODE_INT:
+                break;
+
+            case Constants.OPCODE_POWER:
+                break;
+
+            case Constants.OPCODE_LOG:
+                break;
+
+            case Constants.OPCODE_SIN:
+                break;
+
+            case Constants.OPCODE_COS:
+                break;
+
+            case Constants.OPCODE_TAN:
+                break;
+
+            case Constants.OPCODE_COT:
+                break;
+
+            case Constants.OPCODE_AND:
+                break;
+
+            case Constants.OPCODE_OR:
+                break;
+
+            case Constants.OPCODE_XOR:
+                break;
+
+            case Constants.OPCODE_NOT:
+                break;
+
+            case Constants.OPCODE_SHIFT_LEFT:
+                break;
+
+            case Constants.OPCODE_SHIFT_RIGHT:
+                break;
+
+            case Constants.OPCODE_ROTATE_LEFT:
+                break;
+
+            case Constants.OPCODE_ROTATE_RIGHT:
+                break;
+
+        }
     }
     
     public void setNumberBase(int numberBase)
