@@ -57,6 +57,13 @@ public class Controller
                 break;
 
             case Constants.OPCODE_MUL:
+                op1 = base.inConvert(opParams.getOp1());
+                op2 = base.inConvert(opParams.getOp2());
+                operation.multiply(op1, op2);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_DIV:
@@ -75,6 +82,12 @@ public class Controller
                 break;
 
             case Constants.OPCODE_INT:
+                op1 = base.inConvert(opParams.getOp1());
+                operation.Int(op1);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_POWER:
@@ -93,6 +106,12 @@ public class Controller
                 break;
 
             case Constants.OPCODE_COT:
+                op1 = base.inConvert(opParams.getOp1());
+                operation.cot(op1);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_AND:
@@ -108,6 +127,13 @@ public class Controller
                 break;
 
             case Constants.OPCODE_SHIFT_LEFT:
+                op1 = base.inConvert(opParams.getOp1());
+                op2 = base.inConvert(opParams.getOp2());
+                operation.shiftTleft(op1, op2);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_SHIFT_RIGHT:
