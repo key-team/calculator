@@ -63,12 +63,25 @@ public class Controller
                 break;
 
             case Constants.OPCODE_MOD:
+                op1 = base.inConvert(opParams.getOp1());
+                op2 = base.inConvert(opParams.getOp2());
+                operation.mod(op1, op2);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_ROUND:
                 break;
 
             case Constants.OPCODE_CEIL:
+                op1 = base.inConvert(opParams.getOp1());
+                operation.ceil(op1);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_FLOOR:
@@ -87,6 +100,13 @@ public class Controller
                 break;
 
             case Constants.OPCODE_COS:
+                op1 = base.inConvert(opParams.getOp1());
+                op2 = base.inConvert(opParams.getOp2());
+                operation.cos(op1);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_TAN:
@@ -105,6 +125,12 @@ public class Controller
                 break;
 
             case Constants.OPCODE_NOT:
+                op1 = base.inConvert(opParams.getOp1());
+                operation.not(op1);
+
+                if (!err.isErrorOccured())
+                    opRes.setResult(base.outConvert(ac.getValue()));
+                opRes.setErr(err);
                 break;
 
             case Constants.OPCODE_SHIFT_LEFT:
