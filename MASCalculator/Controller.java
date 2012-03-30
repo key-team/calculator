@@ -40,7 +40,7 @@ public class Controller
     
     public void setNumberBase(int numberBase)
     {
-        base.setBase(numberBase);
+        this.base.setBase(numberBase);
     }
     
     public int getNumberBase()
@@ -57,15 +57,14 @@ public class Controller
     public OperationResult retriveMemory()
     {
         OperationResult opRes = new OperationResult();
-        this.mem.getValue();
-        opRes.setResult(base.outConvert(mem.getValue()));
+        opRes.setResult(this.base.outConvert(this.mem.getValue()));
         return opRes;
 
     }
     
     public void clearMemory()
     {
-        mem.setValue(null);
+        this.mem.setValue(null);
     }
     
     public boolean isMemorySet()
